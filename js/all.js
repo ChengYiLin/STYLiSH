@@ -1,6 +1,6 @@
 const Host = "https://api.appworks-school.tw/api/1.0";
 // const root_pathname = "/";
-const root_pathname = "/Front-End-Class-Batch11/students/martin/";
+const root_pathname = "/STYLiSH/";
 
 // -- for all
 let logo = document.querySelector(".logo");
