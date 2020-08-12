@@ -1,0 +1,87 @@
+// outer
+main{
+    padding: 3rem 0;
+    .container_member{
+        width: 80%;
+        max-width: 1140px;
+        margin: 0 auto;
+        .title{
+            font-size: 2rem;
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 3px solid gray;
+        }
+        
+        .inform{
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            .profile_img{
+                flex: 0 0 20vw;
+                height: 20vw;
+                border-radius: 50%;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .profile_data{
+                flex: 0 0 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-size: 1.25rem;
+                    padding: 1rem 0;
+                }
+            }
+        }
+        @media (max-width: 800px){
+            .inform{
+                display: block;
+                .profile_img{
+                    width: 15rem;
+                    height: 15rem;
+                    margin: 0 auto;
+                }
+                .profile_data{
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        .logout_inform{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .logoutbtn{
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            #logout{
+                width: 8rem;
+                font-size: 1.4rem;
+                padding: .5rem 0;
+                color: white;;
+                background: #313538;
+                border-radius: .25rem;
+                box-sizing: border-box;
+                cursor: pointer;
+                &:hover{
+                    background: #44494d;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px){
+    main{
+        padding: 1rem 0;
+        .container_member{
+            width: 90%;
+            padding: 0;
+        } 
+    }
+}
+

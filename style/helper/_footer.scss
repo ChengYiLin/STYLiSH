@@ -1,0 +1,107 @@
+// Footer always been down
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex-grow: 1;
+}
+
+// Footer Main
+footer{
+    padding: 2rem 0;
+    background: #313538;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    // footer menu
+    .footer_menu{
+        display: flex;
+        li{
+            padding: 0 2rem;
+            border-right: 2px solid #828282;
+            a{
+                font-size: 1.2rem;
+                color: #f5f5f5;
+            }
+        }
+        .menu_end{
+            border: none;
+        }
+    }
+    @media (max-width: 1080px) {
+        .footer_menu{
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 120px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex: 1 1 60%;
+            li{
+                border: none;
+                padding: .5rem;
+                text-align: center;
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    // social media
+    .social_media{
+        display: flex;
+        .icon{
+            display: block;
+            width: 3.125rem;
+            height: 3.125rem;
+            margin: 0 1rem;
+        }
+        .line{
+            background-image: url(../images/social_community/line.png);
+            background-size: cover;
+        }
+        .twitter{
+            background-image: url(../images/social_community/twitter.png);
+            background-size: cover;
+        }
+        .fb{
+            background-image: url(../images/social_community/facebook.png);
+            background-size: cover;
+        }   
+    }
+    @media (max-width: 576px) {
+        .social_media{
+            flex: 1 1 40%;
+            .icon{
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                margin: 0 .3rem;
+                background-size: cover;
+            }
+        }
+    }
+
+    // copy right
+    .copy_right{
+        color: #828282;
+    }
+    @media (max-width: 576px) {
+        .copy_right{
+            font-size: .8rem;
+            flex-basis: 300px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    // For header inform
+    footer{
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLish 服裝</title>
+    <!-- mine -->
+    <link rel="stylesheet" href="./style/all.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- top_nav -->
+        <nav class="navbar">
+            <!-- logo -->
+            <a href="#" class="logo"></a>
+            <!-- nav items -->
+            <ul class="menu">
+                <li>
+                    <a href="./?tag=women" id="women">女裝</a>
+                </li>
+                <li>
+                    <a href="./?tag=men" id="men">男裝</a>
+                </li>
+                <li class="menu_end">
+                    <a href="./?tag=accessories" id="accessories">配件</a>
+                </li>
+            </ul>
+            <!-- Search bar -->
+            <div class="search" id="search">
+                <form action="">
+                    <input type="text" id="search_bar" name="search_bar">
+                </form>
+                <a href="#" class="search_icon" id="search_btn"></a>
+            </div>
+
+            <!-- member inform -->
+            <div class="inform">
+                <div class="inform_block">
+                    <!-- <a class="icon cart" href="./cartpage.html"></a>
+                    <p class="text">購物車</p> -->
+                    <a class="icon cart" href="./cartpage.html"></a>
+                    <p class="text" id="icon_cart_text">購物車</p>
+                </div>
+                <div class="inform_block border_end">
+                    <a class="icon member"></a>
+                    <p class="text">會員</p>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Black bar -->
+        <div class="black_bar"></div>
+
+        <!-- Carousel -->
+        <div class="slide_container">
+        </div>
+    </header>
+
+    <main>
+        <div class="cartpage_container">
+            <!-- Breadcrumb -->
+            <div class="Breadcrumb">
+                <i class="fas fa-home"></i>HOME > <i class="fas fa-shopping-cart"></i>BAG
+            </div>
+
+            <!-- Cart product -->
+            <div class="Cart">
+                <div class="top_title">
+                    <p class="cart">購物車(<span class="cart_pd_num">0</span>)</p>
+                    <div class="qty_price">
+                        <p>數量</p>
+                        <p>單價</p>
+                        <p>小計</p>
+                    </div>
+                </div>
+                <div class="product_list">
+
+                </div>
+            </div>
+
+            <!-- Shipping & Payment -->
+            <div class="Shipping_Payment">
+                <div class="select_form_group">
+                    <label for="Shipping">配送地區</label>
+                    <span class="select">
+                        <select class="options" id="Shipping">
+                            <option value="台灣本島">台灣本島</option>
+                            <option value="澎湖,金馬,馬祖">澎湖,金馬,馬祖</option>
+                            <option value="綠島,蘭嶼,小琉球">綠島,蘭嶼,小琉球</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="select_form_group group_even">
+                    <label for="Payment">付款方式</label>
+                    <span class="select">
+                        <select class="options" id="Payment">
+                            <option value="宅配貨到付款">宅配貨到付款</option>
+                            <option value="超商付款取貨">超商付款取貨</option>
+                            <option value="中華郵政寄件">中華郵政寄件</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Warning Message -->
+            <div class="Warning_Msg">
+                <p class="Hint">
+                    <i class="fas fa-exclamation-triangle"></i>提醒您 ：
+                </p>
+                <ul class="Msg">
+                    <li>
+                        <p>請填寫正確收件人資訊，避免包裹配送不達</p>
+                    </li>
+                    <li>
+                        <p>請填寫正確收件人姓名(與證件相符),避免無法領取</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Recipient Inform-->
+            <div class="Recipient_Inform">
+                <div class="title">收件資料</div>
+                <form>
+                    <div class="form_group">
+                        <label for="rec_name">收件人姓名</label>
+                        <input type="text" id="rec_name">
+                    </div>
+                    <div class="form_group">
+                        <label for="rec_addr">收件人地址</label>
+                        <input type="text" id="rec_addr">
+                    </div>
+                    <div class="form_group">
+                        <label for="rec_email">收件人信箱</label>
+                        <input type="email" id="rec_email">
+                    </div>
+                    <div class="form_group">
+                        <label for="rec_phone">手機號碼</label>
+                        <input type="tel" id="rec_phone">
+                    </div>
+                    <div class="form_radio_group">
+                        <p class="radio_name">配送時間</p>
+                        <label class="radio_label">
+                            <input type="radio" name="rec_time" value="morning">
+                            08:00 ~ 12:00
+                        </label>
+                        <label class="radio_label">
+                            <input type="radio" name="rec_time" value="afternoon">
+                            13:00 ~ 17:00
+                        </label>
+                        <label class="radio_label">
+                            <input type="radio" name="rec_time" value="random">
+                            不指定時間
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TayPay -->
+            <div class="Taypay">
+                <div class="title">信用卡資料</div>
+                <div class="taypay_group">
+                    <p class="taypay_label">信用卡卡號</p>
+                    <div class="tpfield" id="card-number">
+                        <span id="card_logo"></span>
+                    </div>
+                </div>
+                <div class="taypay_group">
+                    <p class="taypay_label">卡片到期日</p>
+                    <div class="tpfield" id="card-expiration-date"></div>
+                </div>
+                <div class="taypay_group">
+                    <p class="taypay_label">卡片後3碼</p>
+                    <div class="tpfield" id="card-ccv"></div>
+                </div>
+            </div>
+
+            <!-- Calculate Money -->
+            <div class="Calculate">
+                <div class="item">
+                    <p class="item_name">總金額 :</p>
+                    <p class="money pd_total_money">0</p>
+                </div>
+                <div class="item">
+                    <p class="item_name">運費金額 :</p>
+                    <p class="money pd_shipping_money">30</p>
+                </div>
+                <div class="item calculate_end">
+                    <p class="item_name">應附金額 :</p>
+                    <p class="money whole_pay_money">0</p>
+                </div>
+                <div class="item">
+                    <button class="submit_btn">確認付款</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <!-- footer menu -->
+        <ul class="footer_menu">
+            <li>
+                <a href="#">關於Stylish</a>
+            </li>
+            <li>
+                <a href="#">服務條款</a>
+            </li>
+            <li>
+                <a href="#">隱私政策</a>
+            </li>
+            <li>
+                <a href="#">聯絡我們</a>
+            </li>
+            <li class="menu_end">
+                <a href="#">FAQ</a>
+            </li>
+        </ul>
+
+        <!-- social media menu -->
+        <ul class="social_media">
+            <li>
+                <a href="#" class="icon line"></a>
+            </li>
+            <li>
+                <a href="#" class="icon twitter"></a>
+            </li>
+            <li>
+                <a href="#" class="icon fb"></a>
+            </li>
+        </ul>
+
+        <!-- copy right -->
+        <p class="copy_right">© 2018. All rights reserved.</p>
+    </footer>
+
+    <!-- Facebook js -->
+    <script src="./js/facebook.js"></script>
+    <!-- mine js -->
+    <script src="./js/all.js"></script>
+    <!-- TapPay js -->
+    <script src="https://js.tappaysdk.com/tpdirect/v5.2.0"></script>
+    <script src="./js/taypay.js"></script>
+</body>
+
+</html>
